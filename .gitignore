@@ -46,3 +46,6 @@ llama-index-core/llama_index/core/_static
 **/.coverage
 **/coverage.xml
 \nstorage/
+
+/docs/examples/cookbooks/data
+/docs/examples/cookbooks/plugins
