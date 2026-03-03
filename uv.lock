@@ -2,6 +2,12 @@ version = 1
 revision = 2
 requires-python = "==3.10"
 
+[manifest]
+members = [
+    "cookbooks",
+    "llama-index",
+]
+
 [[package]]
 name = "aiohappyeyeballs"
 version = "2.6.1"
@@ -317,6 +323,17 @@ sdist = { url = "https://files.pythonhosted.org/packages/4c/13/7d740c5849255756b
 wheels = [
     { url = "https://files.pythonhosted.org/packages/60/97/891a0971e1e4a8c5d2b20bbe0e524dc04548d2307fee33cdeba148fd4fc7/comm-0.2.3-py3-none-any.whl", hash = "sha256:c615d91d75f7f04f095b30d1c1711babd43bdc6419c1be9886a85f2f4e489417", size = 7294, upload-time = "2025-07-25T14:02:02.896Z" },
 ]
+
+[[package]]
+name = "cookbooks"
+version = "0.1.0"
+source = { virtual = "docs/examples/cookbooks" }
+dependencies = [
+    { name = "ipykernel" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "ipykernel", specifier = ">=6.31.0" }]
 
 [[package]]
 name = "cryptography"
@@ -804,6 +821,7 @@ name = "llama-index"
 version = "0.14.15"
 source = { editable = "." }
 dependencies = [
+    { name = "ipykernel" },
     { name = "llama-index-cli" },
     { name = "llama-index-core" },
     { name = "llama-index-embeddings-openai" },
@@ -839,6 +857,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "ipykernel", specifier = ">=6.31.0" },
     { name = "llama-index-cli", marker = "python_full_version >= '3.10'", specifier = ">=0.5.0,<0.6" },
     { name = "llama-index-core", specifier = ">=0.14.15,<0.15.0" },
     { name = "llama-index-embeddings-openai", specifier = ">=0.5.0,<0.6" },
